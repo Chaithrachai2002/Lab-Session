@@ -1,0 +1,61 @@
+class Armstrong
+{
+   public static void main(String[] ar)
+	{
+	     for(int Armstrong=0;Armstrong<100000;Armstrong++)
+		{
+		int no=Armstrong;
+		int no2=Armstrong;
+		int count=0;
+		int sum=0;
+		while(no2>0)
+		{
+			count++;
+			no2=no2/10;
+		}
+		while(no>0)
+		{
+			int split=no%10;
+			sum+=powercalc(count,split);
+			no=no/10;
+		}
+		if(sum==Armstrong)	
+		{
+ 			System.out.println(Armstrong);
+		}
+
+	   }
+	}
+	public static int powercalc(int count,int split)
+	{
+		int pow=1;
+		for(int i=0;i<count;i++)
+		{
+				pow*=split;
+		}
+		return pow;
+
+	}
+}
+
+  output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+153
+370
+371
+407
+1634
+8208
+9474
+54748
+92727
+93084

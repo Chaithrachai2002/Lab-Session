@@ -1,0 +1,21 @@
+class Wish 
+{
+static
+{
+System.out.println("STATIC BLOCK");
+}
+Wish()
+{
+System.out.println("Constructor");
+}
+public static void dispaly()
+{
+System.out.println("Method/non-static/instance");
+}
+public static void main(String[] ar)
+{
+System.out.println("Static method");
+new Wish();//object creation 
+Wish.dispaly();
+}
+}
